@@ -57,3 +57,7 @@ If you modify the code and plan to publish results, the original vHLLE notice re
 
 - New and modified code in this repository is licensed under the MIT License. See `LICENSE`.
 - Third‑party components are included under their original terms. See `THIRD_PARTY_NOTICES` and the headers in the corresponding source files.
+
+## Contact
+
+For questions, issues, or guidance on using the code, please contact the author (V. Vovchenko). You can reach me at vvovchenko@uh.edu. Feel free to open an issue for tracking.
