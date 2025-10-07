@@ -1,0 +1,30 @@
+outputDir       hydro_output/song2D.b7.ideal
+
+eosType       1               ! reserved for future use
+
+etaS      0.0             !  eta/s value
+zetaS     0.0             !  zeta/s, bulk viscosity
+e_crit    0.515           !  criterion for surface finding
+
+nx        161             ! number of cells in X direction
+ny        161             ! number of cells in Y direction
+nz        5               ! number of cells in eta direction
+xmin     -16.0            ! coordinate of the first cell
+xmax      16.0            ! coordinate of the last cell
+ymin     -16.0
+ymax      16.0
+etamin   -4.0
+etamax    4.0
+
+! icModel: 1=Glauber, 2=Glauber_table+parametrized rapidity for energy conserv. check, 4=Gubser flow
+icModel    1
+glauberVar 1       ! reserved for future use
+icInputFile .
+s0ScaleFactor  53.55
+epsilon0   30.0
+impactPar  7.0
+alpha      0.0
+tau0       0.6     ! starting proper time
+tauMax     10.0    ! proper time to stop hydro
+dtau       0.05    ! timestep
+

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9EBA57A2-920A-4300-B91F-E5211F03DB6C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>hlle_visc_lib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\lib\</OutDir>
+    <TargetName>libHLLEviscD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\lib\</OutDir>
+    <TargetName>libHLLEvisc</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ROOTSYS)\include;D:\Programs\NVIDIA Corporation\CUDA Samples\v7.5\common\inc;D:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <CudaCompile>
+      <Include>D:\Programs\NVIDIA Corporation\CUDA Samples\v7.5\common\inc;D:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include</Include>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ROOTSYS)\include;D:\Programs\NVIDIA Corporation\CUDA Samples\v7.5\common\inc;D:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <CudaCompile>
+      <Include>D:\Programs\NVIDIA Corporation\CUDA Samples\v7.5\common\inc;D:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include</Include>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cll.h" />
+    <ClInclude Include="cornelius.h" />
+    <ClInclude Include="dileptons.h" />
+    <ClInclude Include="eo1.h" />
+    <ClInclude Include="eo3.h" />
+    <ClInclude Include="eoAZH.h" />
+    <ClInclude Include="eoChiral.h" />
+    <ClInclude Include="eoHadron.h" />
+    <ClInclude Include="eos.h" />
+    <ClInclude Include="eoSimpleSpline.h" />
+    <ClInclude Include="eosLinearCombination.h" />
+    <ClInclude Include="eosLinearCombinationTable.h" />
+    <ClInclude Include="eosuQGP.h" />
+    <ClInclude Include="fld.h" />
+    <ClInclude Include="hdo.h" />
+    <ClInclude Include="ic.h" />
+    <ClInclude Include="icBjorken.h" />
+    <ClInclude Include="icGlauber.h" />
+    <ClInclude Include="icGlauberMC.h" />
+    <ClInclude Include="icGubser.h" />
+    <ClInclude Include="ickw.h" />
+    <ClInclude Include="icPartUrqmd.h" />
+    <ClInclude Include="icurqmd.h" />
+    <ClInclude Include="inc.h" />
+    <ClInclude Include="MersenneTwister.h" />
+    <ClInclude Include="NumericalIntegration.h" />
+    <ClInclude Include="photons.h" />
+    <ClInclude Include="photonsCUDA.h" />
+    <ClInclude Include="rmn.h" />
+    <ClInclude Include="s95p.h" />
+    <ClInclude Include="SplineFunction.h" />
+    <ClInclude Include="trancoeff.h" />
+    <ClInclude Include="unistd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cll.cpp" />
+    <ClCompile Include="cornelius.cpp" />
+    <ClCompile Include="dileptons.cpp" />
+    <ClCompile Include="eo1.cpp" />
+    <ClCompile Include="eo3.cpp" />
+    <ClCompile Include="eoAZH.cpp" />
+    <ClCompile Include="eoChiral.cpp" />
+    <ClCompile Include="eoHadron.cpp" />
+    <ClCompile Include="eos.cpp" />
+    <ClCompile Include="eoSimpleSpline.cpp" />
+    <ClCompile Include="eosLinearCombination.cpp" />
+    <ClCompile Include="eosLinearCombinationTable.cpp" />
+    <ClCompile Include="eosuQGP.cpp" />
+    <ClCompile Include="fld.cpp" />
+    <ClCompile Include="hdo.cpp" />
+    <ClCompile Include="ic.cpp" />
+    <ClCompile Include="icBjorken.cpp" />
+    <ClCompile Include="icGlauber.cpp" />
+    <ClCompile Include="icGlauberMC.cpp" />
+    <ClCompile Include="icGubser.cpp" />
+    <ClCompile Include="ickw.cpp" />
+    <ClCompile Include="icPartUrqmd.cpp" />
+    <ClCompile Include="icurqmd.cpp" />
+    <ClCompile Include="NumericalIntegration.cpp" />
+    <ClCompile Include="photons.cpp" />
+    <ClCompile Include="photonsCUDA.cpp" />
+    <ClCompile Include="rmn.cpp" />
+    <ClCompile Include="s95p.cpp" />
+    <ClCompile Include="trancoeff.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="photonsCUDA.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.targets" />
+  </ImportGroup>
+</Project>

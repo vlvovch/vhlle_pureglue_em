@@ -1,0 +1,93 @@
+Third‑Party Notices and Attributions
+===================================
+
+This repository includes third‑party code with its own notices and terms.
+These components remain under their respective licenses; see the referenced
+source files for the authoritative text.
+
+1) vHLLE (original upstream code)
+---------------------------------
+Source files: e.g., `hlle_em/main.cpp`, `hlle_em_pp/main.cpp`,
+`hlle_reverse/main.cpp`, `hlle_visc_lib/fld.cpp`, `hlle_visc_lib/hdo.cpp`,
+`hlle_visc_lib/cll.h` (and possibly others that carry the same header).
+
+Header notice (excerpt):
+
+  vHLLE : a 3D viscous hydrodynamic code; version 1.1 (October 2014)
+  by Iurii Karpenko (contact: yu.karpenko@gmail.com)
+  For the detailed description please refer to: arXiv:1312.4160 [nucl-th]
+
+  This code can be freely used and redistributed, provided that this copyright
+  appear in all the copies. If you decide to make modifications to the code,
+  please contact the authors, especially if you plan to publish the results
+  obtained with such modified code. Any publication of results obtained using
+  this code must include the reference to arXiv:1312.4160 [nucl-th] or the
+  published version of it, when available.
+
+Obligation: Cite arXiv:1312.4160 (or the published version) in publications.
+
+2) Cornelius hypersurface finder
+--------------------------------
+Source file: `hlle_visc_lib/cornelius.cpp`
+
+Header notice (verbatim):
+
+  cornelius++ version 1.3: Copyright 2012, Pasi Huovinen and Hannu Holopainen
+
+  This subroutine is aimed to be used as a part of the fluid dynamical models
+  of the heavy-ion physics community. Permission to use it for any purpose
+  except for any commercial purpose is granted, provided that any publication
+  cites the paper describing the algorithm:
+    P. Huovinen and H. Petersen, arXiv:1206.3371 [nucl-th]
+
+  Permission to distribute this subroutine is granted, provided that no fee is
+  charged, and that this copyright and permission notice appear in all the
+  copies. Permission to modify this subroutine is granted provided that the
+  modified subroutine is made publicly available latest when any results obtained
+  using the modified subroutine are published, the modified subroutine is
+  distributed under terms similar to this notice, and the modified code carries
+  both the original copyright notice and notices stating that you modified it,
+  and a relevant date/year.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of FITNESS FOR A PARTICULAR PURPOSE.
+
+Notes: Contains a non‑commercial clause and conditions on distribution/modification.
+
+3) Mersenne Twister RNG (MTRand)
+---------------------------------
+Source file: `hlle_visc_lib/MersenneTwister.h`
+
+License: BSD 3‑Clause (excerpt):
+
+  Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,
+  Copyright (C) 2000 - 2009, Richard J. Wagner
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+    1. Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+    3. The names of its contributors may not be used to endorse or promote
+       products derived from this software without specific prior written
+       permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES...
+
+4) Other dependencies
+---------------------
+Some configurations may download or use additional headers at configure time
+(e.g., CUDA Samples helper headers for optional CUDA builds). Those materials
+are governed by their own licenses from their respective vendors/authors.
+
+If you add or replace third‑party components, please update this file and keep
+the original notices with the corresponding source files.
+
