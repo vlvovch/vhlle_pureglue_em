@@ -1,6 +1,6 @@
 # vHLLE EM (Hydro + EM Probes)
 
-Hydrodynamic simulation of heavy-ion collisions using the original vHLLE code (https://github.com/yukarpenko/vhlle), adapted to incorporate a time‑dependent quark‑undersaturated equation of state (EoS) and the emission of electromagnetic probes (photons and dileptons). The implementation is based on V. Vovchenko et al., Phys. Rev. C 94, 024906 (2016), [doi:10.1103/PhysRevC.94.024906](https://doi.org/10.1103/PhysRevC.94.024906) [[arXiv:1604.06346]](https://arxiv.org/abs/1604.06346).
+Hydrodynamic simulation of heavy-ion collisions using the original vHLLE code (https://github.com/yukarpenko/vhlle), adapted to incorporate a time‑dependent quark‑undersaturated equation of state (EoS) and the emission of electromagnetic probes (photons and dileptons). The implementation is based on V. Vovchenko et al., [Phys. Rev. C 94, 024906 (2016)](https://doi.org/10.1103/PhysRevC.94.024906) [[arXiv:1604.06346]](https://arxiv.org/abs/1604.06346).
 
 ## Key Differences from vHLLE
 - vHLLE implemented as a reusable library for linking.
